@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+        .backbox{
+            height: 500px;
+            width: 350px;
+            background-color: gray;
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            margin: auto;
+        }
+        .firstnumber{
+            background-color: orange;
+            height: 200px;
+            width: 350px;
+            padding: 10px;
+            box-sizing:border-box;
+        }
+        .firstnumber input{
+            font-size: 26px;
+            margin-top: 20px;
+            margin-top: 32px;
+        }
+        .button-wrap{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-evenly;
+            margin-top: 30px;
+        }
+        .add{
+            height: 60px;
+            width: 60px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        .sub{
+            height: 60px;
+            width: 60px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        .divide{
+            height: 60px;
+            width: 60px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        .multiply{
+            height: 60px;
+            width: 60px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        #show-data{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 79px;
+            font-size: 22px;
+        }
+        h1{
+            text-align: center;
+            font-family: 'algerian';
+            font-size: 50px;
+            font-weight: 500;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <div class="backbox">
+        <div class="firstnumber">
+            <form>
+                <input type="text" placeholder="insert first number" id="num1">
+                <input type="text" placeholder="insert second number here" id="num2">
+            </form>
+        </div>
+        <div class="button-wrap">
+            <!-- function call -->
+        <button class="add" onclick={handleAddition()}>+</button> 
+        <button class="sub" onclick={handleSubtract()}>-</button>
+        <button class="divide" onclick={handleDivide()}>/</button>
+        <button class="multiply"onclick={handleMultiply()}>x</button>
+        </div>
+        <div id="show-data"></div>
+    </div>
+    <script src="../calculator/js/index.js"></script>
+</body>
+</html>
