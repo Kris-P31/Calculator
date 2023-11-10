@@ -17,7 +17,6 @@
         }
         .firstnumber{
             background-color: orange;
-            height: 200px;
             width: 350px;
             padding: 10px;
             box-sizing:border-box;
@@ -71,17 +70,21 @@
             font-size: 50px;
             font-weight: 500;
         }
-        
-    </style>
+        .error{
+            color: red;
+            font-size: 20px;
+        }
+        </style>
 </head>
 <body>
     <h1>Calculator</h1>
     <div class="backbox">
         <div class="firstnumber">
             <form>
-                <input type="text" placeholder="insert first number" id="num1">
-                <input type="text" placeholder="insert second number here" id="num2">
+                <input type="number" placeholder="insert first number" id="num1">
+                <input type="number" placeholder="insert second number here" id="num2">
             </form>
+            <p class="error" id="errorMsg"></p>
         </div>
         <div class="button-wrap">
             <!-- function call -->
